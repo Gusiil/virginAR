@@ -3,6 +3,18 @@
 <script>
   // VConsole 默认会挂载到 `window.VConsole` 上
   var vConsole = new window.VConsole();
+  var date = new Date(); // 参数需要毫秒数，所以这里将秒数乘于 1000
+  Y = date.getFullYear() + "-";
+  M =
+    (date.getMonth() + 1 < 10
+      ? "0" + (date.getMonth() + 1)
+      : date.getMonth() + 1) + "-";
+  D = date.getDate() + " ";
+  h = date.getHours() + ":";
+  m = date.getMinutes() + ":";
+  s = date.getSeconds();
+  // 用于检测缓存
+  console.log(Y + M + D + h + m + s);
 </script>
 <style>
   .arjs-loader {
@@ -49,9 +61,9 @@
       smoothThreshold="5"
     >
       <a-entity
-        obj-model="obj: url(https://lf3-static.bytednsdoc.com/obj/eden-cn/caeh7bfvht/bunny.obj);"
+        gltf-model="https://lf3-static.bytednsdoc.com/obj/eden-cn/caeh7bfvht/exported.gltf"
         scale="5 5 5"
-        position="100 100 0"
+        position="50 150 0"
       >
       </a-entity>
     </a-nft>
