@@ -1,72 +1,14 @@
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
-<script>
-  // VConsole 默认会挂载到 `window.VConsole` 上
-  var vConsole = new window.VConsole();
-  var date = new Date(); // 参数需要毫秒数，所以这里将秒数乘于 1000
-  Y = date.getFullYear() + "-";
-  M =
-    (date.getMonth() + 1 < 10
-      ? "0" + (date.getMonth() + 1)
-      : date.getMonth() + 1) + "-";
-  D = date.getDate() + " ";
-  h = date.getHours() + ":";
-  m = date.getMinutes() + ":";
-  s = date.getSeconds();
-  // 用于检测缓存
-  console.log(Y + M + D + h + m + s);
-</script>
-<style>
-  .arjs-loader {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .arjs-loader div {
-    text-align: center;
-    font-size: 1.25em;
-    color: white;
-  }
-</style>
-
-<!-- rawgithack development URL -->
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-
-<body style="margin: 0px; overflow: hidden">
-  <!-- minimal loader shown until image descriptors are loaded -->
-  <div class="arjs-loader">
-    <div>Loading, please wait = -</div>
-  </div>
-  <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-  >
-    <!-- use rawgithack to retrieve the correct url for nft marker (see 'trex' below) -->
-    <a-nft
-      type="nft"
-      url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance="0.01"
-      smoothThreshold="5"
-    >
-      <a-entity
-        gltf-model="https://lf3-static.bytednsdoc.com/obj/eden-cn/caeh7bfvht/t1.gltf"
-        scale="5 5 5"
-        position="50 150 0"
-      >
-      </a-entity>
-    </a-nft>
-    <a-entity camera></a-entity>
-  </a-scene>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>像素大作战</title>
+      <script type="module" crossorigin src="/assets/index.1f4233e0.js"></script>
+      <link rel="stylesheet" href="/assets/index.41d34e98.css">
+    </head>
+    <body>
+        <div id="root"></div>
+        
+    </body>
+</html>
